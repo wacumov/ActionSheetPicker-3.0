@@ -55,14 +55,6 @@ CG_INLINE BOOL isIPhone4() {
 
 @implementation MyPopoverController
 + (BOOL)canShowPopover {
-    if (IS_IPAD) {
-        if ([UITraitCollection class]) {
-            UITraitCollection *traits = [UIApplication sharedApplication].keyWindow.traitCollection;
-            if (traits.horizontalSizeClass == UIUserInterfaceSizeClassCompact)
-                return NO;
-        }
-        return YES;
-    }
     return NO;
 }
 
